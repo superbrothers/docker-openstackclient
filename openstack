@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+OPENSTACKCLIENT_VERSION="3.16.1"
+
+exec docker run \
+    --rm \
+    -it \
+    -v "${HOME}:${HOME}" \
+    -w "${PWD}" \
+    -e OS_AUTH_URL="${OS_AUTH_URL}" \
+    -e OS_IDENTITY_API_VERSION="${OS_IDENTITY_API_VERSION}" \
+    -e OS_PROJECT_NAME="${OS_PROJECT_NAME}" \
+    -e OS_PROJECT_DOMAIN_NAME="${OS_PROJECT_DOMAIN_NAME}" \
+    -e OS_USERNAME="${OS_USERNAME}" \
+    -e OS_USER_DOMAIN_NAME="${OS_USER_DOMAIN_NAME}" \
+    -e OS_PASSWORD="${OS_USER_DOMAIN_NAME}" \
+    "superbrothers/openstackclient:${OPENSTACKCLIENT_VERSION}" \
+    "$@"
