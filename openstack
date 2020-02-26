@@ -2,7 +2,7 @@
 
 set -e -o pipefail
 
-OPENSTACKCLIENT_VERSION="3.16.1"
+OPENSTACKCLIENT_VERSION="3.18.1"
 
 exec docker run \
     --rm \

@@ -1,5 +1,5 @@
 IMAGE := superbrothers/openstackclient
-OPENSTACKCLIENT_VERSION := 3.16.1
+OPENSTACKCLIENT_VERSION := 3.18.1
 
 .PHONY: image
 image:
